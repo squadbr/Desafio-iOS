@@ -14,3 +14,4 @@ Sinta-se livre na escolha de arquitetura, libs, layout e testes.
 Para entregar o desafio, faça um Fork deste repositório, adicione seus arquivos e faça um Merge Request.
 
 Boa Sorte! 
+- Squad Dev Team
