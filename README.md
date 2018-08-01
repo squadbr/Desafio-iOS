@@ -1,5 +1,5 @@
 # Desafio-iOS
-**Buscador de Notas de Filmes no OMDB
+**Buscador de Notas de Filmes no OMDB**
 
 Para este desafio você terá que consumir a API da OMDB (http://www.omdbapi.com/) e apresentar o resultado em uma lista atendendo os seguintes critérios:
 
