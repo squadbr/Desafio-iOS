@@ -42,6 +42,7 @@
 		F7607D922113EF5E00995CF6 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7607D912113EF5E00995CF6 /* MovieTableViewCell.swift */; };
 		F7607D942113F64600995CF6 /* MovieExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7607D932113F64600995CF6 /* MovieExtension.swift */; };
 		F7607D972113F92800995CF6 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7607D962113F92800995CF6 /* MovieViewModel.swift */; };
+		F7607D9B2113FF7D00995CF6 /* ImageServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7607D9A2113FF7D00995CF6 /* ImageServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -197,6 +198,7 @@
 		F7607D912113EF5E00995CF6 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		F7607D932113F64600995CF6 /* MovieExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieExtension.swift; sourceTree = "<group>"; };
 		F7607D962113F92800995CF6 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
+		F7607D9A2113FF7D00995CF6 /* ImageServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,11 +271,10 @@
 			isa = PBXGroup;
 			children = (
 				F7607CDF2113D6F500995CF6 /* Desafio-iOS */,
-				F7607D812113E10700995CF6 /* Resources */,
-				F7607CF42113D6F700995CF6 /* Desafio-iOSTests */,
 				F7607D062113D75900995CF6 /* Infrastructure */,
 				F7607D292113D76100995CF6 /* Persistence */,
 				F7607D4B2113D76900995CF6 /* Services */,
+				F7607CF42113D6F700995CF6 /* Desafio-iOSTests */,
 				F7607CDE2113D6F500995CF6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -298,6 +299,7 @@
 			children = (
 				F7607D7F2113E0D100995CF6 /* Application */,
 				F7607D802113E0FD00995CF6 /* Presentation */,
+				F7607D812113E10700995CF6 /* Resources */,
 			);
 			path = "Desafio-iOS";
 			sourceTree = "<group>";
@@ -404,7 +406,7 @@
 			isa = PBXGroup;
 			children = (
 				F7607D772113DF8C00995CF6 /* Enumerations */,
-				F7607D932113F64600995CF6 /* MovieExtension.swift */,
+				F7607D992113FAD800995CF6 /* Extensions */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -413,6 +415,7 @@
 			isa = PBXGroup;
 			children = (
 				F7607D7A2113E02500995CF6 /* MovieServices.swift */,
+				F7607D9A2113FF7D00995CF6 /* ImageServices.swift */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -474,7 +477,7 @@
 		F7607D862113E19800995CF6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F7607D872113E1A700995CF6 /* Movie.swift */,
+				F7607D982113FAC100995CF6 /* Classes */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -503,6 +506,22 @@
 				F7607D962113F92800995CF6 /* MovieViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F7607D982113FAC100995CF6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F7607D872113E1A700995CF6 /* Movie.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F7607D992113FAD800995CF6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F7607D932113F64600995CF6 /* MovieExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -884,6 +903,7 @@
 			files = (
 				F7607D7B2113E02500995CF6 /* MovieServices.swift in Sources */,
 				F7607D7E2113E06400995CF6 /* QueueManager.swift in Sources */,
+				F7607D9B2113FF7D00995CF6 /* ImageServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

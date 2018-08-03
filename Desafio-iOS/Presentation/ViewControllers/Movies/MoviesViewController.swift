@@ -30,6 +30,9 @@ extension MoviesViewController {
         }
         let movie: MovieViewModel = self.manager.movie(index: indexPath.row)
         cell.titleLabel.text = movie.title
+        self.manager.image(poster: movie.poster) { (image) in
+            cell.movieImageView?.image = image
+        }
         return cell
     }
     
@@ -43,10 +46,6 @@ extension MoviesViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         self.manager.search(query: searchBar.text ?? "")
-    }
-
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
     }
 
 }

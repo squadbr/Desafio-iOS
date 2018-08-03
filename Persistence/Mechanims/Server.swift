@@ -15,26 +15,23 @@ public class Server {
     internal enum Method: String {
         case get, post, put, delete
     }
-
-    internal static func request<T: Decodable>(method: Method,
-                                               endpoint: String = "",
-                                               parameters: [String: Any] = [:],
-                                               payload: [String: Any]? = nil) throws -> T {
-        let request = try createURLRequest(method: method, endpoint: endpoint, parameters: parameters, payload: payload)
-        let response = try URLSession.performSynchronousRequest(request)
+    
+    public static func download(url: String) throws -> Data {
         
+        guard let url: URL = URL(string: url) else {
+            throw ServerError.malformedURL
+        }
+        let urlRequest = URLRequest(url: url)
+        let response = try URLSession.performSynchronousRequest(urlRequest)
+
         if let error = response.error {
             throw error
             
         } else if response.response?.statusCode == 200, let data = response.data {
             
-            let decoder: JSONDecoder = JSONDecoder()
-            let serverResponse = try decoder.decode(T.self, from: data)
-
-            return serverResponse
+            return data
             
         } else { throw ServerError.unknown(statusCode: response.response?.statusCode, payload: response.data) }
-        
     }
     
     private static func createURLRequest(method: Method,
@@ -51,12 +48,12 @@ public class Server {
             query.append(URLQueryItem(name: parameter.key, value: "\(parameter.value)"))
         }
         urlComponents.queryItems = query
-
+        
         guard let url: URL = urlComponents.url else {
             throw ServerError.malformedURL
         }
         var urlRequest = URLRequest(url: url)
-
+        
         // configure authentication header
         urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
@@ -64,8 +61,38 @@ public class Server {
         if let payload = payload {
             urlRequest.httpBody = try JSONSerialization.data(withJSONObject: payload, options: .prettyPrinted)
         }
-
+        
         return urlRequest
+    }
+    
+    internal static func request(method: Method,
+                                 endpoint: String = "",
+                                 parameters: [String: Any] = [:],
+                                 payload: [String: Any]? = nil) throws -> Data {
+        let request = try createURLRequest(method: method, endpoint: endpoint, parameters: parameters, payload: payload)
+        let response = try URLSession.performSynchronousRequest(request)
+        
+        if let error = response.error {
+            throw error
+            
+        } else if response.response?.statusCode == 200, let data = response.data {
+
+            return data
+            
+        } else { throw ServerError.unknown(statusCode: response.response?.statusCode, payload: response.data) }
+        
+    }
+
+    internal static func request<T: Decodable>(method: Method,
+                                               endpoint: String = "",
+                                               parameters: [String: Any] = [:],
+                                               payload: [String: Any]? = nil) throws -> T {
+        let data = try self.request(method: method, endpoint: endpoint, parameters: parameters, payload: payload)
+        
+        let decoder: JSONDecoder = JSONDecoder()
+        let serverResponse = try decoder.decode(T.self, from: data)
+        
+        return serverResponse
     }
 
 }

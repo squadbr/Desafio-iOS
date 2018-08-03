@@ -12,12 +12,15 @@ import Infrastructure
 extension Movie: Decodable {
     
     internal enum CodingKeys: String, CodingKey {
-        case title = "Title"
+        case id = "imdbID", title = "Title", poster = "Poster"
+        
     }
     
     public convenience init(from decoder: Decoder) throws {
         self.init()
         let values = try decoder.container(keyedBy: CodingKeys.self)
+        self.id = try values.decode(String.self, forKey: .id)
         self.title = try values.decode(String.self, forKey: .title)
+        self.poster = try values.decode(String.self, forKey: .poster)
     }
 }

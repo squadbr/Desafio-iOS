@@ -41,7 +41,21 @@ class MoviesManager {
 
     func movie(index: Int) -> MovieViewModel {
         let movie: Movie = self.movies[index]
-        return MovieViewModel(title: movie.title ?? "", rating: "")
+        return MovieViewModel(title: movie.title, rating: "", poster: movie.poster)
+    }
+    
+    func image(poster: String, completion: @escaping ((UIImage)->())) {
+        guard poster != "N/A" else {
+            completion(UIImage(named: "not_available")!)
+            return
+        }
+        ImageServices.shared.image(with: poster) { (data, error) in
+            if let data = data, let image = UIImage(data: data) {
+                completion(image)
+            } else {
+                completion(UIImage(named: "not_available")!)
+            }
+        }
     }
 
 }

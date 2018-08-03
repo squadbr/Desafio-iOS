@@ -10,7 +10,9 @@ import Foundation
 
 public final class Movie {
 
-    public var title: String?
+    public var id: String!
+    public var title: String!
+    public var poster: String!
 
     public init() {}
 
