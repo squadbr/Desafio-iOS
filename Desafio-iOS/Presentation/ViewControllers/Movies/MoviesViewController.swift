@@ -50,7 +50,22 @@ extension MoviesViewController {
 extension MoviesViewController: UISearchBarDelegate {
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        
+        searchBar.setShowsCancelButton(true, animated: true)
+    }
+
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        if searchBar.text == "" {
+            searchBar.setShowsCancelButton(false, animated: true)
+        }
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.manager.clear()
+        self.tableView.reloadData()
+
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
+        searchBar.setShowsCancelButton(false, animated: true)
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -66,7 +81,8 @@ extension MoviesViewController: MoviesManagerDelegate {
     }
     
     func searchFailure() {
-        
+        self.tableView.reloadData()
+        AlertManager.show(title: "Oops!", message: "Something went wrong. Try Again!", viewController: self)
     }
 
 }

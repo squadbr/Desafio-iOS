@@ -27,12 +27,17 @@ class MoviesManager {
     func search(query: String) {
         MovieServices.search(query: query) { (movies, error) in
             if let error = error {
+                self.movies = []
                 self.delegate?.searchFailure()
             } else {
                 self.movies = movies
                 self.delegate?.searchSuccess()
             }
         }
+    }
+    
+    func clear() {
+        self.movies = []
     }
     
     func numberOfMovies() -> Int {
