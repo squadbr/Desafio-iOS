@@ -35,7 +35,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5FX-U7-SrD">
+                                        <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5FX-U7-SrD">
                                             <rect key="frame" x="10" y="10" width="60" height="60"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="60" id="68D-ad-bNR"/>
@@ -54,10 +54,15 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="bvf-nv-bBL">
+                                            <rect key="frame" x="30" y="30" width="20" height="20"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="bvf-nv-bBL" firstAttribute="centerX" secondItem="5FX-U7-SrD" secondAttribute="centerX" id="D8Y-ti-3dE"/>
                                         <constraint firstAttribute="trailing" secondItem="K3Y-ws-aVs" secondAttribute="trailing" constant="10" id="ERv-Gz-dTW"/>
                                         <constraint firstAttribute="bottom" secondItem="5FX-U7-SrD" secondAttribute="bottom" priority="750" constant="10" id="HTs-Wt-qF1"/>
+                                        <constraint firstItem="bvf-nv-bBL" firstAttribute="centerY" secondItem="5FX-U7-SrD" secondAttribute="centerY" id="LHO-xs-iw8"/>
                                         <constraint firstItem="K3Y-ws-aVs" firstAttribute="leading" secondItem="5FX-U7-SrD" secondAttribute="trailing" constant="8" id="OVZ-BK-jeq"/>
                                         <constraint firstItem="K3Y-ws-aVs" firstAttribute="top" secondItem="5FX-U7-SrD" secondAttribute="top" id="SXN-Kp-bNy"/>
                                         <constraint firstItem="5FX-U7-SrD" firstAttribute="top" secondItem="faN-d3-9PE" secondAttribute="top" constant="10" id="Yrp-xz-ra7"/>
@@ -68,6 +73,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="activityIndicatorView" destination="bvf-nv-bBL" id="l0w-PK-deh"/>
                                     <outlet property="movieImageView" destination="5FX-U7-SrD" id="P0z-Yy-wGI"/>
                                     <outlet property="scoreLabel" destination="lk3-Ga-dmx" id="znl-3d-HCS"/>
                                     <outlet property="titleLabel" destination="K3Y-ws-aVs" id="yr6-Lm-5Ku"/>

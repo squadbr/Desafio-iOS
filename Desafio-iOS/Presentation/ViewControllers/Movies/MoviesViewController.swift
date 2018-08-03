@@ -29,13 +29,22 @@ extension MoviesViewController {
             fatalError("cell with provided identifier not found!")
         }
         let movie: MovieViewModel = self.manager.movie(index: indexPath.row)
+        cell.id = movie.id
         cell.titleLabel.text = movie.title
+        cell.activityIndicatorView.startAnimating()
         self.manager.image(poster: movie.poster) { (image) in
-            cell.movieImageView?.image = image
+            if cell.id == movie.id {
+                cell.movieImageView?.image = image
+                cell.activityIndicatorView.stopAnimating()
+            }
         }
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+
 }
 
 extension MoviesViewController: UISearchBarDelegate {

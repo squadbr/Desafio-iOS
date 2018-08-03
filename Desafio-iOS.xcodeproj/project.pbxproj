@@ -43,6 +43,7 @@
 		F7607D942113F64600995CF6 /* MovieExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7607D932113F64600995CF6 /* MovieExtension.swift */; };
 		F7607D972113F92800995CF6 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7607D962113F92800995CF6 /* MovieViewModel.swift */; };
 		F7607D9B2113FF7D00995CF6 /* ImageServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7607D9A2113FF7D00995CF6 /* ImageServices.swift */; };
+		F7607DA221140C3600995CF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7607DA021140BCE00995CF6 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -199,6 +200,7 @@
 		F7607D932113F64600995CF6 /* MovieExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieExtension.swift; sourceTree = "<group>"; };
 		F7607D962113F92800995CF6 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		F7607D9A2113FF7D00995CF6 /* ImageServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageServices.swift; sourceTree = "<group>"; };
+		F7607DA021140BCE00995CF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -362,6 +364,7 @@
 				F7607D582113D76900995CF6 /* ServicesTests */,
 				F7607D7C2113E05700995CF6 /* Mechanism */,
 				F7607D792113E00100995CF6 /* Business */,
+				F7607D9F21140BB700995CF6 /* Resources */,
 				F7607D4C2113D76900995CF6 /* Services.h */,
 				F7607D4D2113D76900995CF6 /* Info.plist */,
 			);
@@ -522,6 +525,14 @@
 				F7607D932113F64600995CF6 /* MovieExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F7607D9F21140BB700995CF6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F7607DA021140BCE00995CF6 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -825,6 +836,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7607DA221140C3600995CF6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
