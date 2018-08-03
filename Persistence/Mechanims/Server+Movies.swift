@@ -11,8 +11,20 @@ import Infrastructure
 
 public extension Server {
 
-    public static func movie(id: String) throws -> Movie {
-        return try self.request(method: .get, parameters: ["i": "tt3896198"])
+    public struct OMDB {
+        
+        public static func movie(id: String) throws -> Movie {
+            return try Server.request(method: .get, parameters: ["i": id])
+        }
+        
+        public static func search(query: String) throws -> [Movie] {
+            struct SearchStruct: Decodable {
+                var Search: [Movie]
+            }
+            let response: SearchStruct = try Server.request(method: .get, parameters: ["s": query])
+            return response.Search
+        }
+        
     }
 
 }

@@ -25,20 +25,40 @@ extension MoviesViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath)
+        guard let cell: MovieTableViewCell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as? MovieTableViewCell else {
+            fatalError("cell with provided identifier not found!")
+        }
+        let movie: MovieViewModel = self.manager.movie(index: indexPath.row)
+        cell.titleLabel.text = movie.title
         return cell
     }
     
 }
 
 extension MoviesViewController: UISearchBarDelegate {
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.manager.search(query: searchBar.text ?? "")
+    }
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        manager.search(query: searchText)
+        
     }
 
 }
 
 extension MoviesViewController: MoviesManagerDelegate {
+
+    func searchSuccess() {
+        self.tableView.reloadData()
+    }
     
+    func searchFailure() {
+        
+    }
+
 }

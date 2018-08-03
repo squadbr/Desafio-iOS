@@ -11,6 +11,8 @@ import Infrastructure
 import Services
 
 protocol MoviesManagerDelegate: class {
+    func searchSuccess()
+    func searchFailure()
 }
 
 class MoviesManager {
@@ -23,11 +25,23 @@ class MoviesManager {
     }
 
     func search(query: String) {
-        
+        MovieServices.search(query: query) { (movies, error) in
+            if let error = error {
+                self.delegate?.searchFailure()
+            } else {
+                self.movies = movies
+                self.delegate?.searchSuccess()
+            }
+        }
     }
     
     func numberOfMovies() -> Int {
         return movies.count
+    }
+
+    func movie(index: Int) -> MovieViewModel {
+        let movie: Movie = self.movies[index]
+        return MovieViewModel(title: movie.title ?? "", rating: "")
     }
 
 }
