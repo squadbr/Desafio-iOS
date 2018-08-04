@@ -17,10 +17,14 @@ protocol MoviesManagerDelegate: class {
 
 class MoviesManager {
     
+    // delegate
     weak var delegate: MoviesManagerDelegate?
+    
+    // movies
     private var movies: [Movie] = []
 
     init(delegate: MoviesManagerDelegate) {
+        
         self.delegate = delegate
     }
 
@@ -50,7 +54,7 @@ class MoviesManager {
     }
     
     func image(poster: String, completion: @escaping ((UIImage)->())) {
-        ImageServices.shared.image(with: poster) { (data) in
+        DataServices.shared.data(for: poster) { (data) in
             if let image = UIImage(data: data) {
                 completion(image)
             } else {

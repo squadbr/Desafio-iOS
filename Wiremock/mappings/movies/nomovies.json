@@ -1,0 +1,17 @@
+{
+  "request":
+    {
+      "urlPattern": "/\\?s=Is%20There%20A%20Movie%20With%20This%20Name\\?",
+      "method": "GET"
+    },
+
+  "response":
+    {
+      "status": 200,
+      "headers":
+        {
+          "Content-Type" : "application/json"
+        },
+      "body": "{\"Response\":\"False\",\"Error\":\"Movie not found!\"}"
+    }
+}
