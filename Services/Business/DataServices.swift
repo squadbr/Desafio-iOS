@@ -9,9 +9,14 @@
 import Foundation
 import Persistence
 
-public class DataServices {
+public protocol DataServicesProtocol: class {
+    static var shared: DataServicesProtocol { get }
+    func data(for path: String, _ completion: ((_ data: Data) -> Void)?)
+}
 
-    public static let shared: DataServices = DataServices()
+public class DataServices: DataServicesProtocol {
+
+    public static let shared: DataServicesProtocol = DataServices()
 
     private init() {
         let bundle: Bundle = Bundle(for: type(of: self))

@@ -17,7 +17,6 @@ public class Server {
     }
     
     public static func download(url: String) throws -> Data {
-        
         guard let url: URL = URL(string: url) else {
             throw ServerError.malformedURL
         }

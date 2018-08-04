@@ -10,7 +10,12 @@ import Foundation
 import Infrastructure
 import Persistence
 
-public class MovieServices {
+public protocol MovieServicesProtocol: class {
+    static func movie(with id: String, _ completion: ((_ movie: Movie?, _ error: Error?) -> Void)?)
+    static func search(query: String, _ completion: ((_ movie: [Movie], _ error: Error?) -> Void)?)
+}
+
+public class MovieServices: MovieServicesProtocol {
     
     public static func movie(with id: String, _ completion: ((_ movie: Movie?, _ error: Error?) -> Void)?) {
         let blockForExecutionInBackground: BlockOperation = BlockOperation(block: {

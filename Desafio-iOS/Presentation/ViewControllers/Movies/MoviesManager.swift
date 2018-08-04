@@ -20,16 +20,24 @@ class MoviesManager {
     // delegate
     weak var delegate: MoviesManagerDelegate?
     
+    // services
+    let dataServices: DataServicesProtocol.Type
+    let movieServices: MovieServicesProtocol.Type
+    
     // movies
     private var movies: [Movie] = []
 
-    init(delegate: MoviesManagerDelegate) {
+    init(delegate: MoviesManagerDelegate,
+         dataServices: DataServicesProtocol.Type = DataServices.self,
+         movieServices: MovieServicesProtocol.Type = MovieServices.self) {
         
         self.delegate = delegate
+        self.dataServices = dataServices
+        self.movieServices = movieServices
     }
 
     func search(query: String) {
-        MovieServices.search(query: query) { (movies, error) in
+        movieServices.search(query: query) { (movies, error) in
             if let error = error {
                 self.movies = []
                 self.delegate?.searchFailure()
@@ -54,7 +62,7 @@ class MoviesManager {
     }
     
     func image(poster: String, completion: @escaping ((UIImage)->())) {
-        DataServices.shared.data(for: poster) { (data) in
+        dataServices.shared.data(for: poster) { (data) in
             if let image = UIImage(data: data) {
                 completion(image)
             } else {

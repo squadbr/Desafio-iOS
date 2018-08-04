@@ -50,6 +50,8 @@
 		F79E9A5D211650B800318DD4 /* MovieExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E9A502116432200318DD4 /* MovieExtensionTests.swift */; };
 		F7E1A91821165C3B00D4BF7A /* QueueManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1A91721165C3B00D4BF7A /* QueueManagerTests.swift */; };
 		F7E1A91A21165C6A00D4BF7A /* MovieServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1A91921165C6A00D4BF7A /* MovieServicesTests.swift */; };
+		F7E1A91C21165D4100D4BF7A /* MoviesManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1A91B21165D4100D4BF7A /* MoviesManagerTests.swift */; };
+		F7E1A91F2116643800D4BF7A /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1A91E2116643800D4BF7A /* Errors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -234,6 +236,8 @@
 		F79E9A502116432200318DD4 /* MovieExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieExtensionTests.swift; sourceTree = "<group>"; };
 		F7E1A91721165C3B00D4BF7A /* QueueManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueManagerTests.swift; sourceTree = "<group>"; };
 		F7E1A91921165C6A00D4BF7A /* MovieServicesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieServicesTests.swift; sourceTree = "<group>"; };
+		F7E1A91B21165D4100D4BF7A /* MoviesManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesManagerTests.swift; sourceTree = "<group>"; };
+		F7E1A91E2116643800D4BF7A /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -585,6 +589,7 @@
 		F77838FB2115129B00C93CFF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F7E1A91D2116642A00D4BF7A /* Enumerations */,
 				F77838FC211512A200C93CFF /* Classes */,
 			);
 			path = Models;
@@ -658,8 +663,17 @@
 		F79E9A5821164E9F00318DD4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F7E1A91B21165D4100D4BF7A /* MoviesManagerTests.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F7E1A91D2116642A00D4BF7A /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				F7E1A91E2116643800D4BF7A /* Errors.swift */,
+			);
+			path = Enumerations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1000,6 +1014,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7E1A91C21165D4100D4BF7A /* MoviesManagerTests.swift in Sources */,
 				F7607CF62113D6F700995CF6 /* Desafio_iOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1008,6 +1023,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7E1A91F2116643800D4BF7A /* Errors.swift in Sources */,
 				F7607D882113E1A700995CF6 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
