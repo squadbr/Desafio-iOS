@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import Infrastructure
 import Persistence
 @testable import Services
 
@@ -21,7 +22,7 @@ class MovieServicesTests: XCTestCase {
             XCTAssertNil(error)
             expectation.fulfill()
         }
-        
+
         wait(for: [expectation], timeout: 0.5)
     }
     
@@ -37,7 +38,7 @@ class MovieServicesTests: XCTestCase {
             }
             expectation.fulfill()
         }
-        
+
         wait(for: [expectation], timeout: 0.5)
     }
     
@@ -48,17 +49,17 @@ class MovieServicesTests: XCTestCase {
             XCTAssertNil(error)
             expectation.fulfill()
         }
-        
+
         wait(for: [expectation], timeout: 0.5)
     }
-    
+
     func testMovieServicesSearchWithNonExistentMovie() {
         let expectation: XCTestExpectation = XCTestExpectation(description: "movie search")
         MovieServices.search(query: "Is There A Movie With This Name?") { (movies, error) in
             XCTAssertEqual(error as? ServerError, ServerError.noResults)
             expectation.fulfill()
         }
-        
+
         wait(for: [expectation], timeout: 0.5)
     }
     
