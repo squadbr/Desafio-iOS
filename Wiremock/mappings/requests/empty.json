@@ -1,0 +1,17 @@
+{
+  "request":
+    {
+      "urlPattern": "/persistence/empty",
+      "method": "GET"
+    },
+
+  "response":
+    {
+      "status": 200,
+      "headers":
+        {
+          "Content-Type" : "application/json"
+        },
+      "body": "{}"
+    }
+}
