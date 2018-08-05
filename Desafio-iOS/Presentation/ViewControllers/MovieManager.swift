@@ -11,7 +11,7 @@ import Infrastructure
 import Services
 
 protocol MovieManagerDelegate: class {
-    func fetchMovieSuccess(movie: Movie)
+    func fetchMovieSuccess(movie: MovieViewModel)
     func fetchMovieFailure()
 }
 
@@ -27,7 +27,8 @@ class MovieManager {
             if let error = error {
                 self.delegate?.fetchMovieFailure()
             } else if let movie = movie {
-                self.delegate?.fetchMovieSuccess(movie: movie)
+                let movieViewModel = MovieViewModel(id: movie.id, title: movie.title, rating: "", poster: movie.poster)
+                self.delegate?.fetchMovieSuccess(movie: movieViewModel)
             }
         }
     }
