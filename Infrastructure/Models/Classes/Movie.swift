@@ -13,6 +13,9 @@ public final class Movie {
     public var id: String!
     public var title: String!
     public var poster: String!
+    public var plot: String?
+    
+    public var ratings: [Rating]?
 
     public init() {}
 

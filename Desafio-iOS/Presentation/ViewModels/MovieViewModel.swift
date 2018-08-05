@@ -11,6 +11,7 @@ import Foundation
 struct MovieViewModel {
     let id: String
     let title: String
-    let rating: String
     let poster: String
+    let plot: String?
+    let ratings: String?
 }
