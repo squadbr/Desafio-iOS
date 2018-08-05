@@ -46,6 +46,7 @@
 		F77839052115185E00C93CFF /* ServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77839032115185A00C93CFF /* ServerTests.swift */; };
 		F78639D5211793F2006EA59A /* Ratings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78639D4211793F2006EA59A /* Ratings.swift */; };
 		F78639D721179433006EA59A /* RatingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78639D621179433006EA59A /* RatingExtension.swift */; };
+		F78639DB21179A40006EA59A /* MovieManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78639DA21179A40006EA59A /* MovieManagerTests.swift */; };
 		F79E9A4E21163B5E00318DD4 /* Server+MoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E9A4C21163A3D00318DD4 /* Server+MoviesTests.swift */; };
 		F79E9A5D211650B800318DD4 /* MovieExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E9A502116432200318DD4 /* MovieExtensionTests.swift */; };
 		F7E1A91821165C3B00D4BF7A /* QueueManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1A91721165C3B00D4BF7A /* QueueManagerTests.swift */; };
@@ -232,6 +233,7 @@
 		F77839032115185A00C93CFF /* ServerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerTests.swift; sourceTree = "<group>"; };
 		F78639D4211793F2006EA59A /* Ratings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ratings.swift; sourceTree = "<group>"; };
 		F78639D621179433006EA59A /* RatingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingExtension.swift; sourceTree = "<group>"; };
+		F78639DA21179A40006EA59A /* MovieManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieManagerTests.swift; sourceTree = "<group>"; };
 		F79E9A4C21163A3D00318DD4 /* Server+MoviesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Server+MoviesTests.swift"; sourceTree = "<group>"; };
 		F79E9A502116432200318DD4 /* MovieExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieExtensionTests.swift; sourceTree = "<group>"; };
 		F7E1A91721165C3B00D4BF7A /* QueueManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueManagerTests.swift; sourceTree = "<group>"; };
@@ -672,6 +674,7 @@
 			isa = PBXGroup;
 			children = (
 				F7E1A91B21165D4100D4BF7A /* MoviesManagerTests.swift */,
+				F78639DA21179A40006EA59A /* MovieManagerTests.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1022,6 +1025,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F78639DB21179A40006EA59A /* MovieManagerTests.swift in Sources */,
 				F7E1A91C21165D4100D4BF7A /* MoviesManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
