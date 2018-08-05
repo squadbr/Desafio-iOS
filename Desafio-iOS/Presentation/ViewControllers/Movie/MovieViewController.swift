@@ -38,6 +38,7 @@ extension MovieViewController: MovieManagerDelegate {
 
     func fetchMovieSuccess(movie: MovieViewModel) {
         self.plotLabel.text = movie.plot
+        self.ratingLabel.text = movie.ratings
     }
 
     func fetchMovieFailure() {

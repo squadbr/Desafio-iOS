@@ -58,7 +58,7 @@ class MoviesManager {
 
     func movie(index: Int) -> MovieViewModel {
         let movie: Movie = self.movies[index]
-        return MovieViewModel(id: movie.id, title: movie.title, rating: "", poster: movie.poster, plot: movie.plot)
+        return MovieViewModel(id: movie.id, title: movie.title, poster: movie.poster, plot: nil, ratings: nil)
     }
     
     func image(poster: String, completion: @escaping ((UIImage)->())) {

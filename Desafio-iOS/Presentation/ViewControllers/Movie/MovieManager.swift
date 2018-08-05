@@ -38,7 +38,13 @@ class MovieManager {
             if let error = error {
                 self.delegate?.fetchMovieFailure()
             } else if let movie = movie {
-                let movieViewModel = MovieViewModel(id: movie.id, title: movie.title, rating: "", poster: movie.poster, plot: movie.plot)
+                var ratingsString: String = ""
+                movie.ratings?.forEach({ (rating) in
+                    guard let source: String = rating.source, let value: String = rating.value else { return }
+                    ratingsString.append("\(source): \(value)\n")
+                })
+                
+                let movieViewModel = MovieViewModel(id: movie.id, title: movie.title, poster: movie.poster, plot: movie.plot, ratings: ratingsString)
                 self.delegate?.fetchMovieSuccess(movie: movieViewModel)
             }
         }
