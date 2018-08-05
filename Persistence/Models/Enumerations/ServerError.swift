@@ -8,7 +8,8 @@
 
 import Foundation
 
-public enum ServerError: Error {
+public enum ServerError: Error, Equatable {
     case malformedURL
+    case noResults
     case unknown(statusCode: Int?, payload: Data?)
 }

@@ -10,7 +10,7 @@ import Foundation
 
 extension URLSession {
     
-    public static func performSynchronousRequest(_ request: URLRequest) throws -> (data: Data?, response: HTTPURLResponse?, error: Error?) {
+    public static func performSynchronousRequest(_ request: URLRequest) -> (data: Data?, response: HTTPURLResponse?, error: Error?) {
         var serverData: Data?
         var serverResponse: URLResponse?
         var serverError: Error?

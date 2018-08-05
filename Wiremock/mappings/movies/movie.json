@@ -1,0 +1,17 @@
+{
+  "request":
+    {
+      "urlPattern": "/\\?i=abcde",
+      "method": "GET"
+    },
+
+  "response":
+    {
+      "status": 200,
+      "headers":
+        {
+          "Content-Type" : "application/json"
+        },
+      "body": "{\"imdbID\": \"abcde\", \"Title\": \"movie\", \"Poster\": \"http://localhost:8080/images/any.png\" }"
+    }
+}

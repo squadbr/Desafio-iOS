@@ -1,0 +1,12 @@
+{
+  "request":
+    {
+      "urlPattern": "/\\?i=unknown",
+      "method": "GET"
+    },
+
+  "response":
+    {
+      "status": 404
+    }
+}
