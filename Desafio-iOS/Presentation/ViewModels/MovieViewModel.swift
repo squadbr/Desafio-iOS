@@ -13,4 +13,5 @@ struct MovieViewModel {
     let title: String
     let rating: String
     let poster: String
+    let plot: String?
 }

@@ -12,8 +12,7 @@ import Infrastructure
 extension Movie: Decodable {
     
     internal enum CodingKeys: String, CodingKey {
-        case id = "imdbID", title = "Title", poster = "Poster"
-        
+        case id = "imdbID", title = "Title", poster = "Poster", plot = "Plot"
     }
     
     public convenience init(from decoder: Decoder) throws {
@@ -22,5 +21,6 @@ extension Movie: Decodable {
         self.id = try values.decode(String.self, forKey: .id)
         self.title = try values.decode(String.self, forKey: .title)
         self.poster = try values.decode(String.self, forKey: .poster)
+        self.plot = try values.decodeIfPresent(String.self, forKey: .plot)
     }
 }

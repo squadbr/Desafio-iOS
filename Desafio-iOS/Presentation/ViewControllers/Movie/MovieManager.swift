@@ -1,5 +1,5 @@
 //
-//  MovieListManager.swift
+//  MovieManager.swift
 //  Desafio-iOS
 //
 //  Created by Marcos Kobuchi on 02/08/18.
@@ -10,24 +10,21 @@ import Foundation
 import Infrastructure
 import Services
 
-protocol MoviesManagerDelegate: class {
-    func searchSuccess()
-    func searchFailure()
+protocol MovieManagerDelegate: class {
+    func fetchMovieSuccess(movie: MovieViewModel)
+    func fetchMovieFailure()
 }
 
-class MoviesManager {
-    
+class MovieManager {
+
     // delegate
-    weak var delegate: MoviesManagerDelegate?
+    weak var delegate: MovieManagerDelegate?
     
     // services
     let dataServices: DataServicesProtocol.Type
     let movieServices: MovieServicesProtocol.Type
     
-    // movies
-    private var movies: [Movie] = []
-
-    init(delegate: MoviesManagerDelegate,
+    init(delegate: MovieManagerDelegate,
          dataServices: DataServicesProtocol.Type = DataServices.self,
          movieServices: MovieServicesProtocol.Type = MovieServices.self) {
         
@@ -36,29 +33,15 @@ class MoviesManager {
         self.movieServices = movieServices
     }
 
-    func search(query: String) {
-        movieServices.search(query: query) { (movies, error) in
+    func fetch(movie: String) {
+        movieServices.movie(with: movie) { (movie, error) in
             if let error = error {
-                self.movies = []
-                self.delegate?.searchFailure()
-            } else {
-                self.movies = movies
-                self.delegate?.searchSuccess()
+                self.delegate?.fetchMovieFailure()
+            } else if let movie = movie {
+                let movieViewModel = MovieViewModel(id: movie.id, title: movie.title, rating: "", poster: movie.poster, plot: movie.plot)
+                self.delegate?.fetchMovieSuccess(movie: movieViewModel)
             }
         }
-    }
-    
-    func clear() {
-        self.movies = []
-    }
-    
-    func numberOfMovies() -> Int {
-        return movies.count
-    }
-
-    func movie(index: Int) -> MovieViewModel {
-        let movie: Movie = self.movies[index]
-        return MovieViewModel(id: movie.id, title: movie.title, rating: "", poster: movie.poster, plot: movie.plot)
     }
     
     func image(poster: String, completion: @escaping ((UIImage)->())) {
@@ -71,5 +54,5 @@ class MoviesManager {
             }
         }
     }
-
+    
 }

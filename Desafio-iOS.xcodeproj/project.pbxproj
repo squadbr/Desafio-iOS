@@ -507,8 +507,7 @@
 		F7607D832113E12000995CF6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F7607CE22113D6F500995CF6 /* MovieViewController.swift */,
-				F7607D892113E92E00995CF6 /* MovieManager.swift */,
+				F78639D32117928E006EA59A /* Movie */,
 				F7607D8F2113EF2300995CF6 /* Movies */,
 			);
 			path = ViewControllers;
@@ -612,6 +611,15 @@
 				F79E9A4C21163A3D00318DD4 /* Server+MoviesTests.swift */,
 			);
 			path = Mechanism;
+			sourceTree = "<group>";
+		};
+		F78639D32117928E006EA59A /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				F7607CE22113D6F500995CF6 /* MovieViewController.swift */,
+				F7607D892113E92E00995CF6 /* MovieManager.swift */,
+			);
+			path = Movie;
 			sourceTree = "<group>";
 		};
 		F79E9A4F211642E700318DD4 /* Models */ = {
