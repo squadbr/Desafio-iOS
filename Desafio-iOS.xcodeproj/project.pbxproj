@@ -51,6 +51,8 @@
 		F79E9A4E21163B5E00318DD4 /* Server+MoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E9A4C21163A3D00318DD4 /* Server+MoviesTests.swift */; };
 		F79E9A5D211650B800318DD4 /* MovieExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E9A502116432200318DD4 /* MovieExtensionTests.swift */; };
 		F7AC15BC2117A6AE00568364 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AC15BB2117A6AE00568364 /* UIViewExtension.swift */; };
+		F7AC15BF2117A9B800568364 /* UIViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AC15BE2117A9B800568364 /* UIViewExtensionTests.swift */; };
+		F7AC15C12117AC0300568364 /* RatingExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AC15C02117AC0300568364 /* RatingExtensionTests.swift */; };
 		F7E1A91821165C3B00D4BF7A /* QueueManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1A91721165C3B00D4BF7A /* QueueManagerTests.swift */; };
 		F7E1A91A21165C6A00D4BF7A /* MovieServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1A91921165C6A00D4BF7A /* MovieServicesTests.swift */; };
 		F7E1A91C21165D4100D4BF7A /* MoviesManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1A91B21165D4100D4BF7A /* MoviesManagerTests.swift */; };
@@ -240,6 +242,8 @@
 		F79E9A4C21163A3D00318DD4 /* Server+MoviesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Server+MoviesTests.swift"; sourceTree = "<group>"; };
 		F79E9A502116432200318DD4 /* MovieExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieExtensionTests.swift; sourceTree = "<group>"; };
 		F7AC15BB2117A6AE00568364 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		F7AC15BE2117A9B800568364 /* UIViewExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensionTests.swift; sourceTree = "<group>"; };
+		F7AC15C02117AC0300568364 /* RatingExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingExtensionTests.swift; sourceTree = "<group>"; };
 		F7E1A91721165C3B00D4BF7A /* QueueManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueManagerTests.swift; sourceTree = "<group>"; };
 		F7E1A91921165C6A00D4BF7A /* MovieServicesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieServicesTests.swift; sourceTree = "<group>"; };
 		F7E1A91B21165D4100D4BF7A /* MoviesManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesManagerTests.swift; sourceTree = "<group>"; };
@@ -395,9 +399,9 @@
 		F7607D362113D76100995CF6 /* PersistenceTests */ = {
 			isa = PBXGroup;
 			children = (
-				F79E9A4F211642E700318DD4 /* Models */,
 				F77839002115144400C93CFF /* Extensions */,
 				F77839062115186400C93CFF /* Mechanism */,
+				F79E9A4F211642E700318DD4 /* Models */,
 				F7607D392113D76100995CF6 /* Info.plist */,
 			);
 			path = PersistenceTests;
@@ -656,6 +660,7 @@
 			isa = PBXGroup;
 			children = (
 				F79E9A502116432200318DD4 /* MovieExtensionTests.swift */,
+				F7AC15C02117AC0300568364 /* RatingExtensionTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -679,6 +684,7 @@
 		F79E9A5721164E9200318DD4 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				F7AC15BD2117A99700568364 /* Extensions */,
 				F79E9A5821164E9F00318DD4 /* ViewControllers */,
 			);
 			path = Presentation;
@@ -697,6 +703,14 @@
 			isa = PBXGroup;
 			children = (
 				F7AC15BB2117A6AE00568364 /* UIViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F7AC15BD2117A99700568364 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F7AC15BE2117A9B800568364 /* UIViewExtensionTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1050,6 +1064,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F78639DB21179A40006EA59A /* MovieManagerTests.swift in Sources */,
+				F7AC15BF2117A9B800568364 /* UIViewExtensionTests.swift in Sources */,
+				F7AC15C12117AC0300568364 /* RatingExtensionTests.swift in Sources */,
 				F7E1A91C21165D4100D4BF7A /* MoviesManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
