@@ -12,9 +12,7 @@
 		F7607CE62113D6F500995CF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7607CE42113D6F500995CF6 /* Main.storyboard */; };
 		F7607CE82113D6F700995CF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7607CE72113D6F700995CF6 /* Assets.xcassets */; };
 		F7607CEB2113D6F700995CF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7607CE92113D6F700995CF6 /* LaunchScreen.storyboard */; };
-		F7607CF62113D6F700995CF6 /* Desafio_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7607CF52113D6F700995CF6 /* Desafio_iOSTests.swift */; };
 		F7607D0E2113D75900995CF6 /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7607D052113D75900995CF6 /* Infrastructure.framework */; };
-		F7607D152113D75900995CF6 /* InfrastructureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7607D142113D75900995CF6 /* InfrastructureTests.swift */; };
 		F7607D172113D75900995CF6 /* Infrastructure.h in Headers */ = {isa = PBXBuildFile; fileRef = F7607D072113D75900995CF6 /* Infrastructure.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F7607D1A2113D75900995CF6 /* Infrastructure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7607D052113D75900995CF6 /* Infrastructure.framework */; };
 		F7607D1B2113D75900995CF6 /* Infrastructure.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F7607D052113D75900995CF6 /* Infrastructure.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -194,13 +192,11 @@
 		F7607CEA2113D6F700995CF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7607CEC2113D6F700995CF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7607CF12113D6F700995CF6 /* Desafio-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desafio-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7607CF52113D6F700995CF6 /* Desafio_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Desafio_iOSTests.swift; sourceTree = "<group>"; };
 		F7607CF72113D6F700995CF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7607D052113D75900995CF6 /* Infrastructure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Infrastructure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7607D072113D75900995CF6 /* Infrastructure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Infrastructure.h; sourceTree = "<group>"; };
 		F7607D082113D75900995CF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7607D0D2113D75900995CF6 /* InfrastructureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfrastructureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7607D142113D75900995CF6 /* InfrastructureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfrastructureTests.swift; sourceTree = "<group>"; };
 		F7607D162113D75900995CF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7607D282113D76100995CF6 /* Persistence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Persistence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7607D2A2113D76100995CF6 /* Persistence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Persistence.h; sourceTree = "<group>"; };
@@ -347,7 +343,6 @@
 			isa = PBXGroup;
 			children = (
 				F79E9A5721164E9200318DD4 /* Presentation */,
-				F7607CF52113D6F700995CF6 /* Desafio_iOSTests.swift */,
 				F7607CF72113D6F700995CF6 /* Info.plist */,
 			);
 			path = "Desafio-iOSTests";
@@ -368,7 +363,6 @@
 			isa = PBXGroup;
 			children = (
 				F77838FB2115129B00C93CFF /* Models */,
-				F7607D142113D75900995CF6 /* InfrastructureTests.swift */,
 				F7607D162113D75900995CF6 /* Info.plist */,
 			);
 			path = InfrastructureTests;
@@ -1015,7 +1009,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7E1A91C21165D4100D4BF7A /* MoviesManagerTests.swift in Sources */,
-				F7607CF62113D6F700995CF6 /* Desafio_iOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1033,7 +1026,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F77838FD211512E000C93CFF /* MovieTests.swift in Sources */,
-				F7607D152113D75900995CF6 /* InfrastructureTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

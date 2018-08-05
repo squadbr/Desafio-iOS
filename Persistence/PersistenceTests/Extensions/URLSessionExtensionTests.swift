@@ -11,7 +11,7 @@ import XCTest
 
 class URLSessionExtensionTests: XCTestCase {
     
-    func testExample() {
+    func testURLSynchronousRequest() {
         let url = URL(string: Environment.url + "persistence/empty")
         let request: URLRequest = URLRequest(url: url!)
         

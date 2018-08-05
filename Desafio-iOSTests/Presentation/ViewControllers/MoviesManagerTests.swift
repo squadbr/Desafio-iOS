@@ -16,7 +16,6 @@ class MoviesManagerTests: XCTestCase {
     // mock all services
     private class MovieServicesMock: MovieServicesProtocol {
         static func movie(with id: String, _ completion: ((Movie?, Error?) -> Void)?) {
-            
         }
         static func search(query: String, _ completion: (([Movie], Error?) -> Void)?) {
             if query == "query 1" {
@@ -36,7 +35,11 @@ class MoviesManagerTests: XCTestCase {
     private class DataServicesMock: DataServicesProtocol {
         static var shared: DataServicesProtocol = DataServicesMock()
         func data(for path: String, _ completion: ((Data) -> Void)?) {
-            
+            if path == "path 1" {
+                completion?(Data())
+            } else {
+                XCTFail("path not mapped")
+            }
         }
     }
     
@@ -59,6 +62,15 @@ class MoviesManagerTests: XCTestCase {
         
         manager.search(query: "query 1")
         wait(for: [expectation], timeout: 0.5)
+        
+        XCTAssertEqual(manager.numberOfMovies(), 1)
+        let movie: MovieViewModel = manager.movie(index: 0)
+        XCTAssertEqual(movie.id, "id")
+        XCTAssertEqual(movie.title, "title")
+        XCTAssertEqual(movie.poster, "poster")
+        
+        manager.clear()
+        XCTAssertEqual(manager.numberOfMovies(), 0)
     }
     
     func testMoviesManagerSearchFailure() {
@@ -79,6 +91,26 @@ class MoviesManagerTests: XCTestCase {
                                                    movieServices: MovieServicesMock.self)
         
         manager.search(query: "query 2")
+        wait(for: [expectation], timeout: 0.5)
+        
+        XCTAssertEqual(manager.numberOfMovies(), 0)
+    }
+    
+    func testImageForPoster() {
+        class Delegate: MoviesManagerDelegate {
+            func searchFailure() { }
+            func searchSuccess() { }
+        }
+        
+        let delegate: Delegate = Delegate()
+        let manager: MoviesManager = MoviesManager(delegate: delegate,
+                                                   dataServices: DataServicesMock.self,
+                                                   movieServices: MovieServicesMock.self)
+        
+        let expectation: XCTestExpectation = XCTestExpectation(description: "failure")
+        manager.image(poster: "path 1") { (image) in
+            expectation.fulfill()
+        }
         wait(for: [expectation], timeout: 0.5)
     }
 
