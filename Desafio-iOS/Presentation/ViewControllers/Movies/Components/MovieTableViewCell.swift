@@ -17,4 +17,16 @@ class MovieTableViewCell: UITableViewCell {
     
     var id: String?
 
+    var touchImageAction: ((UIImage?) -> Void)?
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        let tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.handleImageTapGesture))
+        self.movieImageView.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func handleImageTapGesture(gesture: UITapGestureRecognizer) {
+        self.touchImageAction?(self.movieImageView?.image)
+    }
+    
 }

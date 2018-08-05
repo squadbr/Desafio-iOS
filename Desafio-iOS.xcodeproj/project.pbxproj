@@ -47,8 +47,13 @@
 		F78639D5211793F2006EA59A /* Ratings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78639D4211793F2006EA59A /* Ratings.swift */; };
 		F78639D721179433006EA59A /* RatingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78639D621179433006EA59A /* RatingExtension.swift */; };
 		F78639DB21179A40006EA59A /* MovieManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78639DA21179A40006EA59A /* MovieManagerTests.swift */; };
+		F78639DD2117A444006EA59A /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78639DC2117A444006EA59A /* ImageViewController.swift */; };
 		F79E9A4E21163B5E00318DD4 /* Server+MoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E9A4C21163A3D00318DD4 /* Server+MoviesTests.swift */; };
 		F79E9A5D211650B800318DD4 /* MovieExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79E9A502116432200318DD4 /* MovieExtensionTests.swift */; };
+		F7AC15BC2117A6AE00568364 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AC15BB2117A6AE00568364 /* UIViewExtension.swift */; };
+		F7AC15BF2117A9B800568364 /* UIViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AC15BE2117A9B800568364 /* UIViewExtensionTests.swift */; };
+		F7AC15C12117AC0300568364 /* RatingExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AC15C02117AC0300568364 /* RatingExtensionTests.swift */; };
+		F7BA92342117AF4A005EC791 /* Desafio_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BA92332117AF4A005EC791 /* Desafio_iOSUITests.swift */; };
 		F7E1A91821165C3B00D4BF7A /* QueueManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1A91721165C3B00D4BF7A /* QueueManagerTests.swift */; };
 		F7E1A91A21165C6A00D4BF7A /* MovieServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1A91921165C6A00D4BF7A /* MovieServicesTests.swift */; };
 		F7E1A91C21165D4100D4BF7A /* MoviesManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E1A91B21165D4100D4BF7A /* MoviesManagerTests.swift */; };
@@ -125,6 +130,34 @@
 			proxyType = 1;
 			remoteGlobalIDString = F7607D272113D76100995CF6;
 			remoteInfo = Persistence;
+		};
+		F7BA92362117AF4A005EC791 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7607CD52113D6F500995CF6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7607CDC2113D6F500995CF6;
+			remoteInfo = "Desafio-iOS";
+		};
+		F7BA923C2117B6B4005EC791 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7607CD52113D6F500995CF6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7607D042113D75900995CF6;
+			remoteInfo = Infrastructure;
+		};
+		F7BA923E2117B6B4005EC791 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7607CD52113D6F500995CF6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7607D272113D76100995CF6;
+			remoteInfo = Persistence;
+		};
+		F7BA92402117B6B4005EC791 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7607CD52113D6F500995CF6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F7607D492113D76900995CF6;
+			remoteInfo = Services;
 		};
 		F7E617062116584800B47C8A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -234,8 +267,15 @@
 		F78639D4211793F2006EA59A /* Ratings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ratings.swift; sourceTree = "<group>"; };
 		F78639D621179433006EA59A /* RatingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingExtension.swift; sourceTree = "<group>"; };
 		F78639DA21179A40006EA59A /* MovieManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieManagerTests.swift; sourceTree = "<group>"; };
+		F78639DC2117A444006EA59A /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		F79E9A4C21163A3D00318DD4 /* Server+MoviesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Server+MoviesTests.swift"; sourceTree = "<group>"; };
 		F79E9A502116432200318DD4 /* MovieExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieExtensionTests.swift; sourceTree = "<group>"; };
+		F7AC15BB2117A6AE00568364 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		F7AC15BE2117A9B800568364 /* UIViewExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensionTests.swift; sourceTree = "<group>"; };
+		F7AC15C02117AC0300568364 /* RatingExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingExtensionTests.swift; sourceTree = "<group>"; };
+		F7BA92312117AF4A005EC791 /* Desafio-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Desafio-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7BA92332117AF4A005EC791 /* Desafio_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Desafio_iOSUITests.swift; sourceTree = "<group>"; };
+		F7BA92352117AF4A005EC791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7E1A91721165C3B00D4BF7A /* QueueManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueManagerTests.swift; sourceTree = "<group>"; };
 		F7E1A91921165C6A00D4BF7A /* MovieServicesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieServicesTests.swift; sourceTree = "<group>"; };
 		F7E1A91B21165D4100D4BF7A /* MoviesManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesManagerTests.swift; sourceTree = "<group>"; };
@@ -305,6 +345,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F7BA922E2117AF4A005EC791 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -313,6 +360,7 @@
 			children = (
 				F7607CDF2113D6F500995CF6 /* Desafio-iOS */,
 				F7607CF42113D6F700995CF6 /* Desafio-iOSTests */,
+				F7BA92322117AF4A005EC791 /* Desafio-iOSUITests */,
 				F7607D062113D75900995CF6 /* Infrastructure */,
 				F7607D292113D76100995CF6 /* Persistence */,
 				F7607D4B2113D76900995CF6 /* Services */,
@@ -331,6 +379,7 @@
 				F7607D302113D76100995CF6 /* PersistenceTests.xctest */,
 				F7607D4A2113D76900995CF6 /* Services.framework */,
 				F7607D522113D76900995CF6 /* ServicesTests.xctest */,
+				F7BA92312117AF4A005EC791 /* Desafio-iOSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -391,9 +440,9 @@
 		F7607D362113D76100995CF6 /* PersistenceTests */ = {
 			isa = PBXGroup;
 			children = (
-				F79E9A4F211642E700318DD4 /* Models */,
 				F77839002115144400C93CFF /* Extensions */,
 				F77839062115186400C93CFF /* Mechanism */,
+				F79E9A4F211642E700318DD4 /* Models */,
 				F7607D392113D76100995CF6 /* Info.plist */,
 			);
 			path = PersistenceTests;
@@ -485,6 +534,7 @@
 		F7607D802113E0FD00995CF6 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				F7AC15BA2117A69600568364 /* Extensions */,
 				F7607DA52114106E00995CF6 /* Components */,
 				F7607D952113F91A00995CF6 /* ViewModels */,
 				F7607D832113E12000995CF6 /* ViewControllers */,
@@ -513,6 +563,7 @@
 		F7607D832113E12000995CF6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F78639DE2117A44C006EA59A /* Image */,
 				F78639D32117928E006EA59A /* Movie */,
 				F7607D8F2113EF2300995CF6 /* Movies */,
 			);
@@ -630,6 +681,14 @@
 			path = Movie;
 			sourceTree = "<group>";
 		};
+		F78639DE2117A44C006EA59A /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				F78639DC2117A444006EA59A /* ImageViewController.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 		F79E9A4F211642E700318DD4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -642,6 +701,7 @@
 			isa = PBXGroup;
 			children = (
 				F79E9A502116432200318DD4 /* MovieExtensionTests.swift */,
+				F7AC15C02117AC0300568364 /* RatingExtensionTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -665,6 +725,7 @@
 		F79E9A5721164E9200318DD4 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				F7AC15BD2117A99700568364 /* Extensions */,
 				F79E9A5821164E9F00318DD4 /* ViewControllers */,
 			);
 			path = Presentation;
@@ -677,6 +738,31 @@
 				F78639DA21179A40006EA59A /* MovieManagerTests.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F7AC15BA2117A69600568364 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F7AC15BB2117A6AE00568364 /* UIViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F7AC15BD2117A99700568364 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F7AC15BE2117A9B800568364 /* UIViewExtensionTests.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F7BA92322117AF4A005EC791 /* Desafio-iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F7BA92332117AF4A005EC791 /* Desafio_iOSUITests.swift */,
+				F7BA92352117AF4A005EC791 /* Info.plist */,
+			);
+			path = "Desafio-iOSUITests";
 			sourceTree = "<group>";
 		};
 		F7E1A91D2116642A00D4BF7A /* Enumerations */ = {
@@ -873,6 +959,27 @@
 			productReference = F7607D522113D76900995CF6 /* ServicesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F7BA92302117AF4A005EC791 /* Desafio-iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7BA923B2117AF4A005EC791 /* Build configuration list for PBXNativeTarget "Desafio-iOSUITests" */;
+			buildPhases = (
+				F7BA922D2117AF4A005EC791 /* Sources */,
+				F7BA922E2117AF4A005EC791 /* Frameworks */,
+				F7BA922F2117AF4A005EC791 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F7BA923D2117B6B4005EC791 /* PBXTargetDependency */,
+				F7BA923F2117B6B4005EC791 /* PBXTargetDependency */,
+				F7BA92412117B6B4005EC791 /* PBXTargetDependency */,
+				F7BA92372117AF4A005EC791 /* PBXTargetDependency */,
+			);
+			name = "Desafio-iOSUITests";
+			productName = "Desafio-iOSUITests";
+			productReference = F7BA92312117AF4A005EC791 /* Desafio-iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -915,6 +1022,10 @@
 						LastSwiftMigration = 0940;
 						TestTargetID = F7607CDC2113D6F500995CF6;
 					};
+					F7BA92302117AF4A005EC791 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = F7607CDC2113D6F500995CF6;
+					};
 				};
 			};
 			buildConfigurationList = F7607CD82113D6F500995CF6 /* Build configuration list for PBXProject "Desafio-iOS" */;
@@ -932,6 +1043,7 @@
 			targets = (
 				F7607CDC2113D6F500995CF6 /* Desafio-iOS */,
 				F7607CF02113D6F700995CF6 /* Desafio-iOSTests */,
+				F7BA92302117AF4A005EC791 /* Desafio-iOSUITests */,
 				F7607D042113D75900995CF6 /* Infrastructure */,
 				F7607D0C2113D75900995CF6 /* InfrastructureTests */,
 				F7607D272113D76100995CF6 /* Persistence */,
@@ -1003,6 +1115,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F7BA922F2117AF4A005EC791 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1010,7 +1129,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7AC15BC2117A6AE00568364 /* UIViewExtension.swift in Sources */,
 				F7607DA42114106A00995CF6 /* AlertManager.swift in Sources */,
+				F78639DD2117A444006EA59A /* ImageViewController.swift in Sources */,
 				F7607D8C2113EC9900995CF6 /* MoviesViewController.swift in Sources */,
 				F7607CE32113D6F500995CF6 /* MovieViewController.swift in Sources */,
 				F7607D922113EF5E00995CF6 /* MovieTableViewCell.swift in Sources */,
@@ -1026,6 +1147,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F78639DB21179A40006EA59A /* MovieManagerTests.swift in Sources */,
+				F7AC15BF2117A9B800568364 /* UIViewExtensionTests.swift in Sources */,
+				F7AC15C12117AC0300568364 /* RatingExtensionTests.swift in Sources */,
 				F7E1A91C21165D4100D4BF7A /* MoviesManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1092,6 +1215,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F7BA922D2117AF4A005EC791 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7BA92342117AF4A005EC791 /* Desafio_iOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1144,6 +1275,26 @@
 			isa = PBXTargetDependency;
 			target = F7607D272113D76100995CF6 /* Persistence */;
 			targetProxy = F7607D732113DCAB00995CF6 /* PBXContainerItemProxy */;
+		};
+		F7BA92372117AF4A005EC791 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7607CDC2113D6F500995CF6 /* Desafio-iOS */;
+			targetProxy = F7BA92362117AF4A005EC791 /* PBXContainerItemProxy */;
+		};
+		F7BA923D2117B6B4005EC791 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7607D042113D75900995CF6 /* Infrastructure */;
+			targetProxy = F7BA923C2117B6B4005EC791 /* PBXContainerItemProxy */;
+		};
+		F7BA923F2117B6B4005EC791 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7607D272113D76100995CF6 /* Persistence */;
+			targetProxy = F7BA923E2117B6B4005EC791 /* PBXContainerItemProxy */;
+		};
+		F7BA92412117B6B4005EC791 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F7607D492113D76900995CF6 /* Services */;
+			targetProxy = F7BA92402117B6B4005EC791 /* PBXContainerItemProxy */;
 		};
 		F7E617072116584800B47C8A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1679,6 +1830,60 @@
 			};
 			name = Release;
 		};
+		F7BA92382117AF4A005EC791 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Desafio-iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kobuchi.Desafio-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Desafio-iOS";
+			};
+			name = Debug;
+		};
+		F7BA92392117AF4A005EC791 /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Desafio-iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kobuchi.Desafio-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Desafio-iOS";
+			};
+			name = Test;
+		};
+		F7BA923A2117AF4A005EC791 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Desafio-iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kobuchi.Desafio-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Desafio-iOS";
+			};
+			name = Release;
+		};
 		F7F7E4872116095F00497D3D /* Test */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2014,6 +2219,16 @@
 				F7607D652113D76900995CF6 /* Debug */,
 				F7F7E48F2116095F00497D3D /* Test */,
 				F7607D662113D76900995CF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7BA923B2117AF4A005EC791 /* Build configuration list for PBXNativeTarget "Desafio-iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7BA92382117AF4A005EC791 /* Debug */,
+				F7BA92392117AF4A005EC791 /* Test */,
+				F7BA923A2117AF4A005EC791 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

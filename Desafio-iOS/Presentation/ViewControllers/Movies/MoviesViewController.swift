@@ -18,6 +18,11 @@ class MoviesViewController: UITableViewController {
             let controller = segue.destination as? MovieViewControllerProtocol {
             
             controller.movie = movie
+        } else if segue.identifier == "showImage",
+            let image: UIImage = sender as? UIImage,
+            let controller = segue.destination as? ImageViewControllerProtocol {
+            
+            controller.image = image
         }
     }
 
@@ -37,6 +42,9 @@ extension MoviesViewController {
         cell.id = movie.id
         cell.titleLabel.text = movie.title
         cell.activityIndicatorView.startAnimating()
+        cell.touchImageAction = { [weak self] image in
+            self?.performSegue(withIdentifier: "showImage", sender: image)
+        }
         self.manager.image(poster: movie.poster) { (image) in
             if cell.id == movie.id {
                 cell.movieImageView?.image = image

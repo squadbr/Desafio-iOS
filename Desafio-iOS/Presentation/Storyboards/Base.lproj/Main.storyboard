@@ -89,11 +89,61 @@
                     <navigationItem key="navigationItem" title="Movies" id="YIj-25-8zD"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="showMovie" id="HtE-N0-red"/>
+                        <segue destination="Kgc-EL-uHY" kind="presentation" identifier="showImage" id="d6c-Wj-HBS"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ou-t1-8bl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-652" y="124.58770614692655"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="Ufe-gC-Jgr">
+            <objects>
+                <viewController id="Kgc-EL-uHY" customClass="ImageViewController" customModule="Desafio_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7hb-ST-XFk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G3v-5y-R7K">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZg-Ka-1h9">
+                                <rect key="frame" x="16" y="16" width="24" height="24"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.46000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="32z-bp-zYs"/>
+                                    <constraint firstAttribute="width" secondItem="EZg-Ka-1h9" secondAttribute="height" multiplier="1:1" id="YlX-y4-TUn"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="close:" destination="Kgc-EL-uHY" eventType="touchUpInside" id="mfu-Lr-NSP"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="close" translatesAutoresizingMaskIntoConstraints="NO" id="Ij0-dL-MVO">
+                                <rect key="frame" x="21" y="21" width="14" height="14"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ij0-dL-MVO" firstAttribute="leading" secondItem="EZg-Ka-1h9" secondAttribute="leading" constant="5" id="0ur-7I-dvi"/>
+                            <constraint firstItem="G3v-5y-R7K" firstAttribute="trailing" secondItem="Ufz-ey-fKA" secondAttribute="trailing" id="8L4-D3-x1J"/>
+                            <constraint firstItem="EZg-Ka-1h9" firstAttribute="leading" secondItem="Ufz-ey-fKA" secondAttribute="leading" constant="16" id="DQ8-BE-exQ"/>
+                            <constraint firstItem="EZg-Ka-1h9" firstAttribute="trailing" secondItem="Ij0-dL-MVO" secondAttribute="trailing" constant="5" id="HQG-Lu-FMP"/>
+                            <constraint firstItem="G3v-5y-R7K" firstAttribute="top" secondItem="7hb-ST-XFk" secondAttribute="top" id="Nb5-Ly-mqY"/>
+                            <constraint firstItem="Ufz-ey-fKA" firstAttribute="bottom" secondItem="G3v-5y-R7K" secondAttribute="bottom" id="S2Y-T0-sJE"/>
+                            <constraint firstItem="G3v-5y-R7K" firstAttribute="leading" secondItem="Ufz-ey-fKA" secondAttribute="leading" id="hgC-j2-cSc"/>
+                            <constraint firstItem="EZg-Ka-1h9" firstAttribute="top" secondItem="7hb-ST-XFk" secondAttribute="top" constant="16" id="nlH-8w-gOV"/>
+                            <constraint firstItem="EZg-Ka-1h9" firstAttribute="bottom" secondItem="Ij0-dL-MVO" secondAttribute="bottom" constant="5" id="swL-Q6-lWR"/>
+                            <constraint firstItem="Ij0-dL-MVO" firstAttribute="top" secondItem="EZg-Ka-1h9" secondAttribute="top" constant="5" id="vv2-fb-aPY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ufz-ey-fKA"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="G3v-5y-R7K" id="X2u-1d-ei3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mz2-rv-veZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-652" y="868.51574212893559"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6nC-fX-h87">
@@ -209,6 +259,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="close" width="14" height="14"/>
         <image name="notavailable" width="100" height="150"/>
     </resources>
 </document>
