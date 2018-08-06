@@ -11,6 +11,7 @@ import Infrastructure
 import Services
 @testable import Desafio_iOS
 
+// swiftlint:disable nesting
 class MoviesManagerTests: XCTestCase {
     
     // mock all services
@@ -108,7 +109,7 @@ class MoviesManagerTests: XCTestCase {
                                                    movieServices: MovieServicesMock.self)
         
         let expectation: XCTestExpectation = XCTestExpectation(description: "failure")
-        manager.image(poster: "path 1") { (image) in
+        manager.image(poster: "path 1") { (_) in
             expectation.fulfill()
         }
         wait(for: [expectation], timeout: 0.5)

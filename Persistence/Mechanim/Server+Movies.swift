@@ -9,6 +9,14 @@
 import Foundation
 import Infrastructure
 
+private struct SearchDTO: Decodable {
+    var search: [Movie]?
+    var response: String
+    private enum CodingKeys: String, CodingKey {
+        case search = "Search", response = "Response"
+    }
+}
+
 public extension Server {
 
     public struct OMDB {
@@ -18,13 +26,9 @@ public extension Server {
         }
         
         public static func search(query: String) throws -> [Movie] {
-            struct SearchStruct: Decodable {
-                var Search: [Movie]?
-                var Response: String
-            }
-            let response: SearchStruct = try Server.request(method: .get, parameters: ["s": query])
+            let response: SearchDTO = try Server.request(method: .get, parameters: ["s": query])
             
-            guard response.Response == "True", let movies: [Movie] = response.Search else {
+            guard response.response == "True", let movies: [Movie] = response.search else {
                 throw ServerError.noResults
             }
             return movies

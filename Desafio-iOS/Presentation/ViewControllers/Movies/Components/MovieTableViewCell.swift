@@ -25,7 +25,8 @@ class MovieTableViewCell: UITableViewCell {
         self.movieImageView.addGestureRecognizer(tapGestureRecognizer)
     }
     
-    @objc func handleImageTapGesture(gesture: UITapGestureRecognizer) {
+    @objc
+    func handleImageTapGesture(gesture: UITapGestureRecognizer) {
         self.touchImageAction?(self.movieImageView?.image)
     }
     

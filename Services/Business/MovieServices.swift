@@ -20,7 +20,7 @@ public class MovieServices: MovieServicesProtocol {
     public static func movie(with id: String, _ completion: ((_ movie: Movie?, _ error: Error?) -> Void)?) {
         let blockForExecutionInBackground: BlockOperation = BlockOperation(block: {
             var movie: Movie?
-            var raisedError: Error? = nil
+            var raisedError: Error?
             
             do {
                 movie = try Server.OMDB.movie(id: id)
@@ -40,7 +40,7 @@ public class MovieServices: MovieServicesProtocol {
     public static func search(query: String, _ completion: ((_ movie: [Movie], _ error: Error?) -> Void)?) {
         let blockForExecutionInBackground: BlockOperation = BlockOperation(block: {
             var movie: [Movie] = []
-            var raisedError: Error? = nil
+            var raisedError: Error?
             
             do {
                 movie = try Server.OMDB.search(query: query)

@@ -10,13 +10,18 @@ import XCTest
 import Infrastructure
 @testable import Persistence
 
+// swiftlint:disable nesting
 class MovieExtensionTests: XCTestCase {
     
     func testDecodeModelFromJSON() {
         struct MyOMDBMovie: Encodable {
-            let imdbID, Title, Poster: String
+            let imdbID, title, poster: String
+            private enum CodingKeys: String, CodingKey {
+                case imdbID = "imdbID", title = "Title", poster = "Poster"
+            }
         }
-        let omdbMovie: MyOMDBMovie = MyOMDBMovie(imdbID: "id", Title: "title", Poster: "poster")
+
+        let omdbMovie: MyOMDBMovie = MyOMDBMovie(imdbID: "id", title: "title", poster: "poster")
         let encoder: JSONEncoder = JSONEncoder()
         let decoder: JSONDecoder = JSONDecoder()
         do {
