@@ -1,0 +1,12 @@
+{
+  "request":
+    {
+      "urlPattern": "/notfound.png",
+      "method": "GET"
+    },
+
+  "response":
+    {
+      "status": 404
+    }
+}

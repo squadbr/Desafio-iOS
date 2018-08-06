@@ -1,0 +1,17 @@
+//
+//  MovieViewModel.swift
+//  Desafio-iOS
+//
+//  Created by Marcos Kobuchi on 02/08/18.
+//  Copyright © 2018 Marcos Kobuchi. All rights reserved.
+//
+
+import Foundation
+
+struct MovieViewModel {
+    let id: String
+    let title: String
+    let poster: String
+    let plot: String?
+    let ratings: String?
+}
