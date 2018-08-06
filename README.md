@@ -1,17 +1,18 @@
 # Desafio-iOS
 **Buscador de Notas de Filmes no OMDB**
 
-Para este desafio você terá que consumir a API da OMDB (http://www.omdbapi.com/) e apresentar o resultado em uma lista atendendo os seguintes critérios:
+**Arquitetura:**
+Dividi o aplicativo numa arquitetura conhecida como n-tier, nas seguintes camadas:
 
-- Deve ser implementado em Swift 4 ou superior;
-- Cada célula deve ter a imagem, o nome e a nota  do filme;
-- Ao selecionar uma célula, deve abrir uma tela de detalhe com a imagem, o nome, a nota, e a sinopse do filme;
-- Ao selecionar a imagem do filme na tela de detalhe, deve abrir a imagem em fullscreen;
-- A primeira tela deve ter um campo de busca que filtra a lista;
-- A API pode ser chamada com uma chave gratuita criada no próprio site;
+- Presentation: inclui tudo aquilo que é relacionado a interface.
+  - Essa camada é dividida em sub-camadas: views, viewcontrollers, manager e viewmodels.
+  - Utilizei aqui o Model View Presenter (MVP), retirando da View (views/viewcontrollers) toda a lógica, consistindo apenas de atualização de interface. A manager (também conhecida como presenter) recebe essa responsabilidade, sendo responsável pelo uso dos serviços e retornando as viewmodels para a view.
+- Services: inclui todas as regras de negócios e serviços.
+  - Essa camada é composta basicamente pelo QueueManager (gerenciador de threads) e pelas services.
+  - Todo o gerenciamento de threads é realizada pela service, sendo que todas as chamadas são executadas em background, e as callbacks são sempre executadas na main thread. Dessa forma, não é necessário se preocupar com threads em mais nenhuma parte do app. Vale lembrar que, desta forma, todas as chamadas de funções de outras camadas é executada de forma síncrona.
+- Persistence: inclui tudo relacionado a persistência (como coredata, que não foi utilizado), e mecanismos de comunicação com a API.
 
-Sinta-se livre na escolha de arquitetura, libs, layout e testes.
-Para entregar o desafio, faça um Fork deste repositório, adicione seus arquivos e faça um Merge Request.
 
-Boa Sorte! 
+**Targets**
 
+**Testes**
