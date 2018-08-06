@@ -55,7 +55,7 @@ class MovieServicesTests: XCTestCase {
 
     func testMovieServicesSearchWithNonExistentMovie() {
         let expectation: XCTestExpectation = XCTestExpectation(description: "movie search")
-        MovieServices.search(query: "Is There A Movie With This Name?") { (movies, error) in
+        MovieServices.search(query: "Is There A Movie With This Name?") { (_, error) in
             XCTAssertEqual(error as? ServerError, ServerError.noResults)
             expectation.fulfill()
         }

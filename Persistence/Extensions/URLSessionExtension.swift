@@ -17,8 +17,7 @@ extension URLSession {
         
         let semaphore: DispatchSemaphore = DispatchSemaphore(value: 0)
         
-        URLSession.shared.dataTask(with: request, completionHandler: {
-            data, response, error -> () in
+        URLSession.shared.dataTask(with: request, completionHandler: { data, response, error -> Void in
             
             serverData = data
             serverResponse = response

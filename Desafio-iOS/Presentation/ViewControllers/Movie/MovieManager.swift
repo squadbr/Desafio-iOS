@@ -35,7 +35,7 @@ class MovieManager {
 
     func fetch(movie: String) {
         movieServices.movie(with: movie) { (movie, error) in
-            if let error = error {
+            if error != nil {
                 self.delegate?.fetchMovieFailure()
             } else if let movie = movie {
                 var ratingsString: String = ""
@@ -50,7 +50,7 @@ class MovieManager {
         }
     }
     
-    func image(poster: String, completion: @escaping ((UIImage)->())) {
+    func image(poster: String, completion: @escaping ((UIImage) -> Void)) {
         dataServices.shared.data(for: poster) { (data) in
             if let image = UIImage(data: data) {
                 completion(image)

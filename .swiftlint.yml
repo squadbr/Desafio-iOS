@@ -1,0 +1,114 @@
+disabled_rules: # rule identifiers to exclude from running
+  - trailing_whitespace
+  - valid_docs
+  - line_length
+  - function_parameter_count
+  - vertical_whitespace
+  - shorthand_operator
+  - large_tuple
+  - class_delegate_protocol
+
+opt_in_rules:
+  - attributes
+  - closure_end_indentation
+  - closure_spacing
+  - explicit_init
+  - fatal_error_message
+  - first_where
+  - operator_usage_whitespace
+  - overridden_super_call
+  - prohibited_super_call
+  - redundant_nil_coalescing
+  - switch_case_on_newline
+
+included: # paths to include during linting. `--path` is ignored if present.
+
+
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+    - Pods
+
+type_name:
+ min_length: 1
+ max_length:
+  warning: 60
+  error: 70
+
+missing_docs: warning
+trailing_semicolon: error
+variable_name:
+  min_length:
+#    error: 1
+    warning: 1
+
+trailing_newline:
+  severity: error
+
+file_length:
+  warning: 400
+  error: 600
+
+syntactic_sugar:
+  severity: error
+
+vertical_parameter_alignment:
+  severity: error
+
+empty_parentheses_with_trailing_closure:
+  severity: error
+
+closure_parameter_position:
+  severity: error
+
+redundant_void_return:
+  severity: error
+
+redundant_optional_initialization:
+  severity: error
+
+unused_closure_parameter:
+ severity: error
+
+opening_brace:
+  severity: error
+
+implicit_getter:
+  severity: error
+
+comma:
+  severity: error
+
+weak_delegate:
+  severity: error
+
+class_delegate_protocol:
+  severity: error
+
+todo:
+  severity: error
+
+colon:
+  severity: error
+
+mark:
+  severity: error
+
+force_unwrapping:
+  severity: error
+
+function_body_length:
+  warning: 20
+  error: 40
+
+type_body_length:
+  warning: 200
+  error: 400
+
+implicitly_unwrapped_optional:
+  mode: all
+  severity: error
+
+cyclomatic_complexity:
+ error: 10
+
+private_outlet:
+ allow_private_set: true
