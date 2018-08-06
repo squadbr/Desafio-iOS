@@ -9,7 +9,7 @@
 import XCTest
 @testable import Persistence
 
-class Desafio_iOSUITests: XCTestCase {
+class DesafioiOSUITests: XCTestCase {
     var app: XCUIApplication!
         
     override func setUp() {

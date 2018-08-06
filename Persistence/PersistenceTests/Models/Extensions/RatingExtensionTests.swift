@@ -10,13 +10,18 @@ import XCTest
 import Infrastructure
 @testable import Persistence
 
+// swiftlint:disable nesting
 class RatingExtensionTests: XCTestCase {
     
     func testDecodeModelFromJSON() {
         struct MyRating: Encodable {
-            let Source, Value: String
+            let source, value: String
+            private enum CodingKeys: String, CodingKey {
+                case source = "Source", value = "Value"
+            }
         }
-        let myRating: MyRating = MyRating(Source: "Key", Value: "Value")
+
+        let myRating: MyRating = MyRating(source: "Key", value: "Value")
         let encoder: JSONEncoder = JSONEncoder()
         let decoder: JSONDecoder = JSONDecoder()
         do {

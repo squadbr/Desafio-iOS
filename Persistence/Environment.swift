@@ -12,7 +12,7 @@ internal struct Environment {
 
     private static let bundle: [String: String] = {
         class ForInstantiatingBundlePurpose {}
-        guard let dictionary: [String: String] = Bundle(for: ForInstantiatingBundlePurpose.self).object(forInfoDictionaryKey: "LSEnvironment") as? [String : String] else {
+        guard let dictionary: [String: String] = Bundle(for: ForInstantiatingBundlePurpose.self).object(forInfoDictionaryKey: "LSEnvironment") as? [String: String] else {
             fatalError("something really bad happened")
         }
         return dictionary

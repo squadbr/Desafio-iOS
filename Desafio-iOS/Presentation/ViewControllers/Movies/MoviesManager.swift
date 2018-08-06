@@ -38,7 +38,7 @@ class MoviesManager {
 
     func search(query: String) {
         movieServices.search(query: query) { (movies, error) in
-            if let error = error {
+            if error != nil {
                 self.movies = []
                 self.delegate?.searchFailure()
             } else {
@@ -61,7 +61,7 @@ class MoviesManager {
         return MovieViewModel(id: movie.id, title: movie.title, poster: movie.poster, plot: nil, ratings: nil)
     }
     
-    func image(poster: String, completion: @escaping ((UIImage)->())) {
+    func image(poster: String, completion: @escaping ((UIImage) -> Void)) {
         dataServices.shared.data(for: poster) { (data) in
             if let image = UIImage(data: data) {
                 completion(image)

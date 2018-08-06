@@ -23,12 +23,7 @@ extension UIView {
     
     @IBInspectable open var cornerRadius: CGFloat {
         get { return layer.cornerRadius }
-        set {
-            if (newValue < 1) {
-                layer.cornerRadius = newValue * bounds.width
-            } else {
-                layer.cornerRadius = newValue
-            }
+        set { layer.cornerRadius = (newValue < 1) ? newValue * bounds.width : newValue
         }
     }
     

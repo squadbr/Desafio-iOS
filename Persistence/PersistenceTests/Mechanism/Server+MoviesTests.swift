@@ -10,7 +10,7 @@ import XCTest
 import Infrastructure
 @testable import Persistence
 
-class Server_MoviesTests: XCTestCase {
+class ServerMoviesTests: XCTestCase {
     
     func testRequestDecodedMovie() {
         do {
