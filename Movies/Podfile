@@ -1,0 +1,19 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+use_frameworks!
+
+def testing_pods
+    
+end
+
+target 'Movies' do
+    
+    pod 'Moya', '~> 11.0'
+
+    target 'MoviesTests' do
+        inherit! :search_paths
+        # Pods for testing
+        testing_pods
+    end
+
+end
