@@ -208,9 +208,6 @@ segues e assim por diante. Este framework é muito útil para manter a organiza�
 # Icon
 <img src="" width="100"/>
 
-# LaunchScreen (Splashcreen)
-<img src="" width="320"/>
-
 # Movies (Popular) List (Collection View)
 <img src="" width="320"/>
 <img src="" width="320"/>
@@ -237,6 +234,9 @@ https://www.cocoacontrols.com/controls/shfsignature
 
 # O que eu faria com mais tempo?
 
+- Splashscreen
+- //TODO: Alert without internet
+- //TODO: loadview
 - Implementaria extensions para UIColor.
 - Faria o uso de "Fakery" para cirar mocks precisos quando rodarmos em um 
   ambiente de teste, garantindo a integridade e funcionalidade da camada de apresentação.
