@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3404D2FC2143B5FD009F25F8 /* DBMovieSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3404D2FA2143B5EE009F25F8 /* DBMovieSupport.framework */; };
+		3404D2FD2143B5FD009F25F8 /* DBMovieSupport.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3404D2FA2143B5EE009F25F8 /* DBMovieSupport.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3404D2FE2143B5FD009F25F8 /* DBMovieApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3404D2FB2143B5EE009F25F8 /* DBMovieApi.framework */; };
+		3404D2FF2143B5FD009F25F8 /* DBMovieApi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3404D2FB2143B5EE009F25F8 /* DBMovieApi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		341B49132141EF4F002CB88C /* DBMovieAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B49122141EF4F002CB88C /* DBMovieAppTests.swift */; };
 		341B491E2141EF4F002CB88C /* DBMovieAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B491D2141EF4F002CB88C /* DBMovieAppUITests.swift */; };
-		341B495E2141F0FC002CB88C /* DBMovieSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 341B495C2141F0E0002CB88C /* DBMovieSupport.framework */; };
-		341B495F2141F0FC002CB88C /* DBMovieSupport.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 341B495C2141F0E0002CB88C /* DBMovieSupport.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		341B49602141F0FC002CB88C /* DBMovieApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 341B495D2141F0E1002CB88C /* DBMovieApi.framework */; };
-		341B49612141F0FC002CB88C /* DBMovieApi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 341B495D2141F0E1002CB88C /* DBMovieApi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		341B49762141F1D5002CB88C /* DBFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341B496B2141F1D4002CB88C /* DBFeedViewController.swift */; };
 		341B49772141F1D5002CB88C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 341B496F2141F1D4002CB88C /* LaunchScreen.storyboard */; };
 		341B49782141F1D5002CB88C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 341B49712141F1D4002CB88C /* Main.storyboard */; };
@@ -53,14 +53,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		341B495B2141F0DD002CB88C /* Embed Frameworks */ = {
+		3404D2F92143B5E8009F25F8 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				341B49612141F0FC002CB88C /* DBMovieApi.framework in Embed Frameworks */,
-				341B495F2141F0FC002CB88C /* DBMovieSupport.framework in Embed Frameworks */,
+				3404D2FF2143B5FD009F25F8 /* DBMovieApi.framework in Embed Frameworks */,
+				3404D2FD2143B5FD009F25F8 /* DBMovieSupport.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +71,8 @@
 		0CB96D3DA6D39F24D2B7C8A8 /* Pods-DBMovieAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DBMovieAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DBMovieAppTests/Pods-DBMovieAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		1596BE623A87C313D8E69FA3 /* Pods_DBMovieAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DBMovieAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		225A5E54BA2749706BE5112A /* Pods-DBMovieAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DBMovieAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DBMovieAppTests/Pods-DBMovieAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3404D2FA2143B5EE009F25F8 /* DBMovieSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DBMovieSupport.framework; path = "../../../Library/Developer/Xcode/DerivedData/DBMovieApp-dkwpmcakntimnnhjpnkejudfwxwt/Build/Products/Debug-iphoneos/DBMovieSupport.framework"; sourceTree = "<group>"; };
+		3404D2FB2143B5EE009F25F8 /* DBMovieApi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DBMovieApi.framework; path = "../../../Library/Developer/Xcode/DerivedData/DBMovieApp-dkwpmcakntimnnhjpnkejudfwxwt/Build/Products/Debug-iphoneos/DBMovieApi.framework"; sourceTree = "<group>"; };
 		341B48FA2141EF4D002CB88C /* DBMovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DBMovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		341B49092141EF4E002CB88C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		341B490E2141EF4F002CB88C /* DBMovieAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DBMovieAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,8 +114,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B94578A0D455FA12EE498343 /* Pods_DBMovieApp.framework in Frameworks */,
-				341B49602141F0FC002CB88C /* DBMovieApi.framework in Frameworks */,
-				341B495E2141F0FC002CB88C /* DBMovieSupport.framework in Frameworks */,
+				3404D2FE2143B5FD009F25F8 /* DBMovieApi.framework in Frameworks */,
+				3404D2FC2143B5FD009F25F8 /* DBMovieSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +333,8 @@
 			children = (
 				341B495C2141F0E0002CB88C /* DBMovieSupport.framework */,
 				341B495D2141F0E1002CB88C /* DBMovieApi.framework */,
+				3404D2FA2143B5EE009F25F8 /* DBMovieSupport.framework */,
+				3404D2FB2143B5EE009F25F8 /* DBMovieApi.framework */,
 				43ABE58758DB13D1E2871002 /* Pods_DBMovieApp.framework */,
 				B5332C9FD54F0E55E0447336 /* Pods_DBMovieAppTests.framework */,
 				1596BE623A87C313D8E69FA3 /* Pods_DBMovieAppUITests.framework */,
@@ -352,7 +356,7 @@
 				341B48F82141EF4D002CB88C /* Resources */,
 				43F2C456E8CE4B0075746D13 /* [CP] Embed Pods Frameworks */,
 				D80B7EADE173D35B0B5E5DCA /* [CP] Copy Pods Resources */,
-				341B495B2141F0DD002CB88C /* Embed Frameworks */,
+				3404D2F92143B5E8009F25F8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
