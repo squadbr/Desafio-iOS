@@ -213,12 +213,11 @@ segues e assim por diante. Este framework é muito útil para manter a organiza�
 <img src="https://github.com/felipesantolim/Desafio-iOS/blob/master/App/screen_04.PNG" width="320"/>
 <img src="https://github.com/felipesantolim/Desafio-iOS/blob/master/App/screen_05.PNG" width="320"/>
 <img src="https://github.com/felipesantolim/Desafio-iOS/blob/master/App/screen_06.PNG" width="320"/>
-<img src="https://github.com/felipesantolim/Desafio-iOS/blob/master/App/screen_06.PNG" width="320"/>
 <img src="https://github.com/felipesantolim/Desafio-iOS/blob/master/App/screen_07.PNG" width="320"/>
 
 # Deatils
 <img src="https://github.com/felipesantolim/Desafio-iOS/blob/master/App/screen_08.PNG" width="320"/>
-<img src="https://github.com/felipesantolim/Desafio-iOS/blob/master/App/screen_08.PNG" width="320"/>
+<img src="https://github.com/felipesantolim/Desafio-iOS/blob/master/App/screen_09.PNG" width="320"/>
 <img src="https://github.com/felipesantolim/Desafio-iOS/blob/master/App/screen_10.PNG" width="320"/>
 <img src="https://github.com/felipesantolim/Desafio-iOS/blob/master/App/screen_11.PNG" width="320"/>
 
