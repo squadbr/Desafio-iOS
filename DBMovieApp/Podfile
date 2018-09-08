@@ -1,0 +1,30 @@
+platform :ios, '11.0'
+use_frameworks!
+workspace 'DBMovieApp.xcworkspace'
+
+target 'DBMovieApp' do
+  
+  pod 'lottie-ios'
+  pod 'R.swift'
+  pod 'ReachabilitySwift'
+  pod 'Fabric'
+  pod 'Crashlytics'    
+  pod 'SwiftyJSON', '~> 4.0'
+  pod 'Alamofire', '~> 4.7'
+  pod 'Kingfisher'
+
+  target 'DBMovieAppTests' do
+    inherit! :search_paths
+  end
+
+  target 'DBMovieAppUITests' do
+    inherit! :search_paths
+  end
+
+end
+
+target 'DBMovieApi' do
+    project 'DBMovieApi/DBMovieApi.xcodeproj'
+    pod 'SwiftyJSON', '~> 4.0'
+    pod 'Alamofire', '~> 4.7'
+end
