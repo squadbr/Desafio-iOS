@@ -41,7 +41,7 @@ end
 
 Utilizei MVC com as camadas Infrastructure, Manager, Business e Provider a fim de abstrair toda a parte do API deixando todas as camadas mais clean. Separei o projeto junto a dois frameworks no workspace sendo eles "DBMovieApi" e "DBMovieSupport".
 
-<img src="" width="320"/>
+<img src="https://github.com/felipesantolim/Desafio-iOS/blob/master/App/screen_02.png" width="320"/>
 
 # Infrastructure:
   "Strings", "Plist", "Storyboard" e "Resources"
@@ -206,15 +206,21 @@ segues e assim por diante. Este framework é muito útil para manter a organiza�
 - OBS: Na pasta imagens que se encontra na raiz, possuem imagens e vídeos do projeto.
 
 # Icon
-<img src="" width="100"/>
+<img src="https://github.com/felipesantolim/Desafio-iOS/blob/master/App/icon.jpg" width="100"/>
 
 # Movies (Popular) List (Collection View)
-<img src="" width="320"/>
-<img src="" width="320"/>
-<img src="" width="320"/>
+<img src="https://github.com/felipesantolim/Desafio-iOS/blob/master/App/screen_03.PNG" width="320"/>
+<img src="https://github.com/felipesantolim/Desafio-iOS/blob/master/App/screen_04.PNG" width="320"/>
+<img src="https://github.com/felipesantolim/Desafio-iOS/blob/master/App/screen_05.PNG" width="320"/>
+<img src="https://github.com/felipesantolim/Desafio-iOS/blob/master/App/screen_06.PNG" width="320"/>
+<img src="https://github.com/felipesantolim/Desafio-iOS/blob/master/App/screen_06.PNG" width="320"/>
+<img src="https://github.com/felipesantolim/Desafio-iOS/blob/master/App/screen_07.PNG" width="320"/>
 
 # Deatils
-<img src="" width="320"/>
+<img src="https://github.com/felipesantolim/Desafio-iOS/blob/master/App/screen_08.PNG" width="320"/>
+<img src="https://github.com/felipesantolim/Desafio-iOS/blob/master/App/screen_08.PNG" width="320"/>
+<img src="https://github.com/felipesantolim/Desafio-iOS/blob/master/App/screen_10.PNG" width="320"/>
+<img src="https://github.com/felipesantolim/Desafio-iOS/blob/master/App/screen_11.PNG" width="320"/>
 
 # My Profile (RESUME):
 I've been spending my time with a lot of contents that involve technologies because I breathe this kind of topic, I have more than six (7) years of experience in iOS development and I don't stop of growing my knowledge in this field. I'm passionate about Apple devices and so on.
