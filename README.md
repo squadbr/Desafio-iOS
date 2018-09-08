@@ -195,10 +195,6 @@ extension DBProvider {
 # R.swift
 Utilizei "R.swift" para realizar o autocomplete de recursos como: images, fonts, identifiers, 
 segues e assim por diante. Este framework é muito útil para manter a organização do projeto como um todo.
-<img src="" width="320"/>
-
-# Fabric (Crashlytics)
-<img src="" width="320"/>
 
 # Aplicação (app Versão= 1.0.0 Build= 0.0.2):
 
@@ -242,6 +238,7 @@ https://www.cocoacontrols.com/controls/shfsignature
 - Splashscreen
 - //TODO: Alert without internet
 - //TODO: loadview
+- Fabric (Crashlytics)
 - Implementaria extensions para UIColor.
 - Faria o uso de "Fakery" para cirar mocks precisos quando rodarmos em um 
   ambiente de teste, garantindo a integridade e funcionalidade da camada de apresentação.
