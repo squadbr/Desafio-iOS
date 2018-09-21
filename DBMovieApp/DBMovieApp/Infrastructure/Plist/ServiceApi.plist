@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>url_search</key>
+	<string>&amp;language=en-US&amp;query=</string>
+	<key>url_s_pg</key>
+	<string>&amp;page=</string>
+	<key>url_s_adult</key>
+	<string>&amp;include_adult=false</string>
+	<key>url_base_movie</key>
+	<string>https://api.themoviedb.org/3/search/movie?</string>
+	<key>url_page</key>
+	<string>&amp;language=en-US&amp;page=</string>
+	<key>url_base_popular</key>
+	<string>https://api.themoviedb.org/3/movie/popular?</string>
+	<key>url_base_now</key>
+	<string>https://api.themoviedb.org/3/movie/now_playing?</string>
+	<key>url_image</key>
+	<string>https://image.tmdb.org/t/p/w500</string>
+	<key>dbmovie_key</key>
+	<string>b226e7aec1ead5233d75ca614ca884d4</string>
+</dict>
+</plist>

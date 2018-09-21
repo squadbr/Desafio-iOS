@@ -1,0 +1,6 @@
+framework module Pods_DBMovieAppTests {
+  umbrella header "Pods-DBMovieAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
